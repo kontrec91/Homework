@@ -1,0 +1,18 @@
+*{
+    box-sizing: border-box;
+}
+.text-box h3:first-child {
+    color:pink;
+}
+#greycol {
+    color:grey; 
+}
+div p:only-child {
+    color:red;
+}
+.text-box p:nth-child(7){
+    color: green;
+}
+.yellow {
+    color: yellow;
+}

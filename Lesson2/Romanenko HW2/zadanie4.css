@@ -1,0 +1,12 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background: url("./images/dom.jpg")300px 120px no-repeat fixed,
+                url("./images/grace.png") ,
+                /* url("./images/donut.png"),
+                url("./images/hadgehog.png")
+                url( "./images/lamp.png");  */
+    background-color: green;  
+}
+

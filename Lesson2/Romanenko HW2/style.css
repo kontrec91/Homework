@@ -1,0 +1,47 @@
+*{
+    box-sizing: border-box;
+}
+ /* .container{
+    text-align: center;
+} */
+blockquote {
+    color: green;/*задаем зеленый цвет*/
+}
+cite > a { 
+    text-decoration: none; /* Убираем подчеркивание у ссылок */
+}  
+cite > a:hover {
+    cursor: pointer;
+    text-decoration: underline; /* Добавляем подчеркивание 
+                                   при наведении курсора мыши на ссылку */
+}  
+a:active { 
+    background-color: yellow;
+}
+a[href^='https://'] {
+    color: red;
+}
+
+ul ~ p {
+    font-size: 26px;
+}
+
+.list > li:last-child {
+    background-color: blue;
+}/*позволяет форматировать последний дочерний
+элемент тега который вложен в класс*/
+.text-box h3:first-child {
+    color:pink;
+}
+#greycol {
+    color:grey; 
+}
+div p:only-child {
+    color:red;
+}
+.text-box p:nth-child(7){
+    color: green;
+}
+.yellow {
+    color: yellow;
+}

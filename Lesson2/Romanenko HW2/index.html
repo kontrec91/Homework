@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HomeWork</title>
+    <link rel="icon" href="https://drive.google.com/drive/u/0/folders/10kgYrRggF-m4IL_GQ7QfDMvA4nGylB9R" sizes="32x32">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        blockquote {
+                    color: blue;
+        } /* здесь буду подключаться стили CSS, задаем синий цвет */
+        ul > a[href^='http://'] {
+                    color: red;
+        }
+    </style>
+</head>
+<body class="container">
+    <h1>Домашнее задание 2</h1>
+    <div>  
+        <h2>Задача 1</h2>
+        <blockquote style="color: red;" cite="https://www.mann-ivanov-ferber.ru/books/mechtat_ne_vredno/">
+            <!-- здесь буду подключаться стили CSS, задаем синий цвет  -->
+           <p>Люди, которые с удовольствием погружаются в свое дело, —
+            лучший образец для подражания.</p> 
+            <cite>
+                Из книги <a style="color: red;" href="https://www.mann-ivanov-ferber.ru/books/mechtat_ne_vredno/">«Мечтать не вредно»</a> 
+            </cite>
+        </blockquote>
+        <p><em><mark>Так как инлайновые стили (заданные через аттрибут style)
+                имеют больший вес по сравнению с внешними стилями
+                (подключенными через тег link в разделе head) и внутренними стилями
+                (подключенными через тег style в разделе head), браузер
+                выводит текст красного цвета. <br>
+                <strong>внешние стили&lt;внутренние стили&lt;инлайновые стили</strong>
+        </mark></em></p>
+    </div> <hr>
+    <div class="holder">
+        <h2>Задача 2</h2>
+        <h1>Title</h1>
+        <ul class="list">
+          <li>
+            <a href="#">link1</a>
+            <ul>
+              <li><a href="#">link2</a></li>
+              <li><a href="#">link3</a></li>
+            </ul>
+          </li>
+          <li><a href="https://www.youtube.com/">link4</a></li>
+          <li><a href="https://validator.w3.org/">link5</a></li>
+          <li><a href="#">link6</a></li>
+        </ul>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, accusamus.</p>
+        <h1>Title</h1>
+        <p>Lorem ipsum dolor sit amet.</p>
+    </div><hr>
+    <div class="text-box">
+        <h3>Покрасьте меня в розовый цвет (color:pink).</h3>
+        <p>Данный элемент должен остаться неоформленным.</p>
+        <p id='greycol'>Покрасьте меня в серый цвет (color:grey).</p>
+        <div>Данный элемент должен остаться неоформленным.</div>
+        <div><p>Покрасьте меня в красный цвет (color:red).</p></div>
+        <h3>Данный элемент должен остаться неоформленным.</h3>
+        <p>Покрасьте меня в зеленый цвет (color:green).</p>
+        <p class='yellow'>Покрасьте меня в желтый цвет (color:yellow).</p>
+    </div>
+</body>
+</html>

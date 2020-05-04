@@ -1,0 +1,73 @@
+/*h
+1{
+    font-size: 20px;
+}
+nav{
+    font-size: 20px;
+}
+ul{
+    color:red;
+}
+main-nav{
+    border: 1px solid 30px;
+}
+#nav{
+    color: green;
+}
+.main-nav li{
+    color: blue;
+}
+*/
+/* body {
+    color: #913D88;
+    font-size: 16px;
+    border: 1px solid #333;
+}
+ 
+p[class|='feature']
+{
+    font-size: 28px;
+}
+body {
+    color: #913D88;
+	font-size: 16px;
+    border: 1px solid #333;
+}
+
+p {
+    border: inherit;
+} */
+
+a:link { color: red; }  /* обычный цвет ссылки */
+a:visited { color: grey; }  /* цвет ссылки, которую пользователь уже посещал */
+a:hover { color: blue; }  /* цвет ссылки, на которую наведен курсор */
+a:active { background-color: yellow; }  /* цвет фона ссылки в момент нажатия на нее */
+
+p::selection {
+    color: #ff0; /* Цвет текста */
+    background: #000; /* Цвет фона */
+}
+
+p::first-letter {
+    font-family: "Times New Roman", Times, serif; /* Гарнитура шрифта первой буквы */
+    font-size: 20px; /* Размер шрифта первого символа */
+    color: red; /* Красный цвет текста */
+}
+p:before {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 100px;
+ }
+ blockquote::before {
+    content: "\2728";
+}
+
+blockquote::after {
+        content: "\2728";
+}
+
+blockquote::selection {
+    color: #c8f7c5;
+    background-color: #f9f0de;
+}
