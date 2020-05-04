@@ -1,0 +1,240 @@
+
+*, :before, :after{
+    box-sizing: border-box;
+} 
+body{
+    margin: 0;/*обнуляем отступы*/
+    /* background: black; */
+}
+img {
+    max-width: 100%;/*картинка не  может быть больше 
+    чем ее родитель*/
+    height: auto;
+}
+strong {
+    font-weight: bold;
+}
+h2 {
+    display: block;
+    margin: 20px 0;
+    font-size: 24px;
+    /* margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px; */
+    font-weight: bold;
+    /* text-transform: uppercase; */
+    text-align: center;
+}
+h3 {
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.wrapper{ /*класс для того, что бы
+    центральная часть занимала всю высоту страницы
+    кроме header и footer,и footer был бы снизу зафиксирован*/
+    display: flex;/*элементы принимают
+    значение flex элементов, и выстраиваются вряд
+    (положение элементов row по умолчанию)*/
+    flex-direction: column;  /*меняем положение элементов 
+    с row по умолчанию на colum, элементы выстраиваются
+    в столбец*/
+    min-height: 100vh;/*vieport height 
+    размер  .wrapper = размеру экрана(страницы)*/
+    /*max-width: auto;*/ /*максю ширина хэдэра*/
+    margin: 0 auto; /*центрируем*/
+    width: 100%;/*возвращаем ширину после применения 
+    display: flex к .wrapper(родительскому контейнеру)*/
+}
+.header{
+    display: flex; /*ставит элементы вряд*/
+    justify-content: space-between; /*раскидывает по краям*/
+    background: rgba(248, 224, 4, 0.856);
+    align-items: center; /*выравниваем элементы по центру*/
+    padding: 15px 15px; /*для того что бы элементы
+    не прилипали к роодителю*/
+} 
+.logo{
+    width: 150px;/*задаем ширину родителя*/
+    /* color: rgba(248, 224, 4, 0.856); */
+    /* background: red;*/
+}
+.menu-nav{
+    flex-grow: 1; /*если добавятся пункты меню, 
+    что бы список равномерно заполнял пространство
+    .menu-nav(он будет занимать все свободное
+    пространство)*/
+}
+.menu-nav ul {
+    display: flex;/*выравнивает вряд элементы списка*/
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    /*обнуляем внешние и внутренние отступы у списка
+    теперь список четко фиксируется по контенту*/
+    justify-content: flex-end;/*привязываем 
+    список к правой стороне*/
+}
+.menu-nav li {
+    margin-left: 15px;/*делвет отступы между
+    элементами списка по 15px, что бы не было лишнего
+    отступа справа(элементы идут с права на лево)*/
+}
+.menu-nav a {
+    text-decoration: none;
+    color: #000;
+}
+.menu-nav a:hover{
+    color: rgb(13, 13, 243);
+    text-decoration: underline;
+}
+main{
+    display: flex;
+    flex-grow: 1;    /*занимает всю высоту родителя(.wrapper)
+    кроме header и footer */
+}
+.aside1, .aside2{
+    min-width: 210px;/*когда работаем с flex-элементами
+    то всегда используем min- max- приставки для изменения
+    ширины/высоты контейнера*/
+    text-align: center;
+    padding-top: 10px;
+    font-weight: bold;
+}
+.aside1 { 
+    background: #f39ef3;
+    order: 1; /*порядок с права на лево-1 */
+
+}
+.aside2 { 
+    background: #9eb5f3;
+    order: 3; /*порядок с права на лево-3 */
+}
+.content{
+    background: #ffffff;
+    padding: 20px 25px;
+    order: 2; /*порядок с права на лево-2(по середине) */
+}
+
+.footer{
+    text-align: center;
+    background: rgb(77, 218, 77);
+    padding: 5px;
+}
+
+.cards{
+    display:flex;
+    min-width: 100vh;
+    flex-wrap:wrap;
+    margin: 5px;
+    /* align-items: center; */
+    /* justify-content: space-around; */
+    
+}
+.card-item{
+    display: flex;
+    flex-direction: column;
+    /* width: 280px; */
+    width: calc((100% / 3) - 2%);
+    border: 1px solid rgb(122, 106, 106);
+    align-items: center;
+    border-radius: 10%;
+    padding: 15px;
+    /* margin: 5px; */
+    margin: 1%;
+}
+.card-item:hover{
+    transform: scale(1.08);
+    transition: 0.5s linear;
+    /*transform-origin:50% 100%; */
+    cursor: pointer;
+    box-shadow: inset 4px 4px 10px 4px rgba(154, 147, 140, 0.5);
+    
+}
+.text{
+    display: block;
+    font-size: 16px;
+    text-align: justify;
+    flex-grow: 1;
+    margin-bottom: 10px;
+}
+
+.card-img{
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: 15px solid rgb(187, 179, 179);
+    margin-bottom: 10px;
+}
+/* img {
+    width: 50px;
+    border-radius: 50%;
+    border: 15px solid rgb(187, 179, 179);
+} */
+.card-item a{
+    text-decoration: none;
+    /* height: 30px; */
+    width: 50px;
+    border-radius: 50px;
+    background:grey;
+    text-align: center;
+    padding: 5px;
+}
+.card-item a:hover {
+    background: rgb(180, 177, 177);
+    /* transition-delay: 0.5s ease; */
+}
+.holder{
+    display: flex;  /*подключаем flex-контейнер*/
+    height: 100px;
+    width: 300px;
+    font-size: 24px;
+    border: 2px solid black;
+    border-radius: 25px 25px 0 0;
+    /*правый и левый верхние углы по 25px*/
+    margin: 0 auto;/*центрирование*/
+    flex-wrap: wrap;/*переполнение*/
+    overflow: hidden;/*все что выходит 
+    за рамку,--скрываем*/
+}
+.item {
+    display:flex;
+    height: 50px;
+    justify-content: center;
+    align-items: center; 
+    /* align-content: center; */
+
+}
+.item:nth-child(1){
+    background: pink;
+    order:1;
+    flex-grow:1;
+    flex-basis: 50%;
+}
+.item:nth-child(2){
+    background: blue;
+    order: 4;
+    flex-grow:1;
+    flex-basis: 33.33%;
+}
+.item:nth-child(3){
+    background: purple;
+    order: 3;
+    flex-grow:1;
+    flex-basis: 33.33%;
+}
+.item:nth-child(4){
+    background: green;
+    order: 5;
+    flex-grow:1;
+    flex-basis: 33.33%;
+}
+.item:nth-child(5){
+    background: orange;
+    order:2;
+    flex-grow:1;
+    flex-basis: 50%;
+}

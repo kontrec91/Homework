@@ -1,0 +1,15 @@
+*{
+    box-sizing: border-box;
+}
+.flex-item{
+    width: 150px;
+    height: 150px;
+    background: hsl(0, 0%, 80%);
+    border: 1px solid red;
+    font-size: 30px;
+}
+.flex-container{
+    background: yellow;
+    /* display: flex; */
+    display: inline-flex;
+}

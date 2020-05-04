@@ -1,0 +1,168 @@
+*{
+    box-sizing :border-box;
+}
+.level1{ /*задаем фон*/
+    width: 638px;
+    height: 589px;
+    background: #0d5825;
+    position: relative;
+}
+blockquote {
+    font-size: 24px;
+    font-family: 'Times New Roman', Times, serif ;
+    font-weight: 700;
+    color: #ffffff;
+    padding-top: 30px;
+    text-align: center;
+}   
+img {
+    width: 150px;
+    position: absolute;
+    top: 288px;
+    transform-origin: 20px 225px; /*задаем точку
+    смещения (~left bottom)*/
+    transition: 0.2s linear; /*эффект при hover*/
+    }
+.img:first-child{
+    left: 212px;
+    transform: rotate(-20deg);
+}
+.img:nth-child(2){
+    left: 244px;
+    transform: rotate(-8deg);
+}
+.img:last-child{
+    left: 265px;
+    transform: rotate(10deg);
+}
+.img:hover{
+    top: 265px;
+}
+.holder{
+    width: 150px;
+    height: 150px;
+    position: relative;
+}
+.pink, .blue, .green{
+    width: 60px;
+    height: 60px;
+    position: absolute;/*привязываем к родителю 
+    (в данном случае к родительскому классу holder*/
+}
+.pink{
+    top: 0;
+    left: 0;
+    background: pink;
+}
+.blue{
+    top: 40px;
+    left: 40px;
+    background: blue;
+    z-index: 2;
+}
+.green{
+    top: 80px;
+    left: 80px;
+    background: green;
+}
+.nav{
+    position: relative;
+    background: grey;
+    width: 200px;
+    height: 400px;
+    position: fixed;/*блок зафиксирован*/
+    left: -180px;/*смещение влево
+    так у нас блок заходит влево
+    и мы видим лишь 20px(NENU HERE)*/
+    z-index: 2000; /*поверх всех элементов!!!*/
+    transition: 0.5s ease;/*время выхода блока
+    до значения left: 0*/
+}
+.nav:hover {
+    left: 0;/*смещение влево до 0,
+    так у нас блок воходит полностью*/
+}
+button {
+    position: absolute;/*привязываемся к .nav*/
+    color:#fff;
+    background-color: grey;
+    border: none;
+    transform-origin: 0% 100%;/*задаем точку трансформации(поворота)*/
+    transform: rotate(90deg);/*поворот на 90град.*/
+    margin-top: 120px;/*задаем положение*/
+    margin-left: 179px;/*задаем положение*/
+    font-size: 16px;
+    line-height: 17px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.nav:hover/*при навелдении мышью на .nav, button перестанет быть видимым*/
+button{
+    opacity:0;
+}
+li {
+    list-style: none;
+    line-height: 30px;
+}
+li:before{
+    content:"";
+    width: 10px;
+    height: 10px;
+    border: 1px solid #000;
+    display: inline-block; /*т.к. нам нужно задать
+    высоту и ширину элемента(display: inline уже 
+    не подходит)+нам не нужен перенос на след. 
+    строку(display: block тоже нет), поэтому, мы здесь 
+    наш элемент должен распологаться как блочно-строчный */
+    background: orange; 
+    margin: 0 10px; /*отступы от начала строки*/
+    transform: rotate(45deg);
+
+}
+a {
+    color: #fff;
+    text-decoration: none; /*отключить стилди тега а,
+    задать новые стили */
+}
+a:hover {
+    color: orange;
+}
+.block{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    border: 2px solid grey;
+}
+.cube{
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: red;
+    animation: move 4s infinite;
+    transition-delay: 0.2s;
+    /*так как по умолчанию transform-origin: center;
+    и стоит зависимость position: relative/absolute
+    то дочерний .cube перемещаеться в рамках родителя 
+    .block,  я правильно мыслю?*/
+}
+@keyframes move {
+   0%{
+    transform: translateX( 0px);
+    background: red;
+   }
+   25%{
+    transform: translateY( 200px);
+    background: blue;
+   }
+   50%{
+    transform: translateY( 200px) translateX( 200px);
+    background: green;
+   }
+   75%{ 
+    transform: translateX( 200px);
+    background: yellow;
+   } 
+   100%{
+    transform: translateX( 0px);
+    background: red;
+   }
+}

@@ -1,0 +1,48 @@
+*{
+    box-sizing: border-box;
+}
+main {
+    max-width: 1000px;/* макс. ширина облисти контента */
+    margin: 0 auto; /*внешние отступы: 0 сверху.снизу 
+    auto справа/слева что бы контент отображался по центру*/
+    text-align: justify; /* выравнивание по ширине */
+}
+h1 {
+    font-size: 40px; /*вымота текста=2 высоты текста родителя*/
+    line-height: 50px;
+    font-weight: bold;
+    text-align: center;
+}
+h2 {
+    font-size: 24px;
+    line-height: 40px;
+    font-weight: bold;
+    text-align: center;/* выравнивание по центру */
+}
+.bear {
+    font: 30px/32px 'Times New Roman', Times, serif;
+    /*стили шрифта: размер шрифта/высота линии 'стиль шрифта'
+    тип Time, шрифты с засечками (антиквенные)*/
+    height: 220px;
+    width: 350px;
+    border: 2px dashed #ff0000;/*пунктирная линия */
+    margin-bottom: 30px; 
+    padding: 15px 10px 20px;
+    background-color: green;
+}
+.article {
+    font: 16px/20px 'Times New Roman', serif;
+    margin-bottom: 30px; 
+}
+.float__img--left {
+    width: 250px;
+    float: left;
+    margin: 0 20px 20px 0;
+}
+.float__img--right {
+    width: 200px;
+    float: right;
+    margin: 20px 0px 20px 20px;
+}
+/*там где не заданы стили шрифта 
+то устраивает шрифт по умолчанию*/

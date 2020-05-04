@@ -1,0 +1,59 @@
+/* 
+.holder {
+    background: #fee;
+    width: 500px;
+}
+h2 {
+    position: relative;
+    left: -10%;
+    background: #aef;
+    margin: 0;
+} */
+/* .holder {
+    background: #fee; 
+    width: 500px
+}
+h2 {
+    position: relative;
+    top: 10px;
+    background: #aef;
+    margin: 0;
+} */
+/* .holder {
+    background: #fee;
+    width: 500px
+}
+h2 {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: #aef;
+    margin: 0;
+} */
+/* h2 {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: #aef;
+    margin: 0;
+}
+
+.parent {
+    background: #fee;
+    width: 500px; 
+    position: relative;
+} */
+/* div {
+    position: absolute;
+    left: 10px; right: 10px; top: 10px; bottom: 10px;
+} */
+/* #top {
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    background: #fee;
+  } */
+  h2 {
+    position: relative;
+    left: -10%;
+  }

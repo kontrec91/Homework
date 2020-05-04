@@ -1,0 +1,177 @@
+*{
+    box-sizing :border-box;
+}
+.level1{ /*задаем фон*/
+    width: 638px;
+    height: 589px;
+    background: #0d5825;
+    position: relative;
+}
+blockquote {
+    font-size: 24px;
+    font-family: 'Times New Roman', Times, serif ;
+    font-weight: 700;
+    color: #ffffff;
+    padding-top: 30px;
+    text-align: center;
+}   
+img {
+    width: 150px;
+    position: absolute;
+    transform-origin: 0% 100%; /*задаем точку
+    смещения (left bottom)*/
+    transition: 1s ease; /*эффект при hover*/
+    }
+.img:first-child{
+    top: 288px;
+    left: 212px;
+    transform: rotate(-20deg);
+}
+.img:nth-child(2){
+    top: 288px;
+    left: 244px;
+    transform: rotate(-8deg);
+}
+.img:last-child{
+    top: 280px;
+    left: 265px;
+    transform: rotate(10deg);
+}
+.img:hover{
+    top: -10px;
+}
+.holder{
+    width: 150px;
+    height: 150px;
+    position: relative;
+}
+.pink, .blue, .green{
+    width: 60px;
+    height: 60px;
+    position: absolute;/*привязываем к родителю 
+    (в данном случае к родительскому классу holder*/
+}
+.pink{
+    top: 0;
+    left: 0;
+    background: pink;
+}
+.blue{
+    top: 40px;
+    left: 40px;
+    background: blue;
+    z-index: 2;
+}
+.green{
+    top: 80px;
+    left: 80px;
+    background: green;
+}
+.nav{
+    position: relative;
+    background: grey;
+    width: 200px;
+    height: 400px;
+    position: fixed;/*блок зафиксирован*/
+    left: -180px;/*смещение влево
+    так у нас блок заходит влево
+    и мы видим лишь 20px(NENU HERE)*/
+    z-index: 2000; /*поверх всех элементов!!!*/
+    transition: 0.5s ease;/*время выхода блока
+    до значения left: 0*/
+}
+.nav:hover {
+    left: 0;/*смещение влево до 0,
+    так у нас блок воходит полностью*/
+}
+button {
+    position: absolute;/*привязываемся к .nav*/
+    color:#fff;
+    background-color: grey;
+    border: none;
+    transform-origin: 0% 100%;/*задаем точку трансформации(поворота)*/
+    transform: rotate(90deg);/*поворот на 90град.*/
+    margin-top: 120px;/*задаем положение*/
+    margin-left: 179px;/*задаем положение*/
+    font-size: 16px;
+    line-height: 17px;
+    font-family: 'Times New Roman', Times, serif;
+}
+.nav:hover/*при навелдении мышью на .nav, button перестанет быть видимым*/
+button{
+    opacity:0;
+}
+li {
+    list-style: none;
+    line-height: 30px;
+}
+li::before{
+    content: "\2666 ";
+    font-size: 25px;
+    margin: 5px;
+    color: orange;
+
+}
+ /*.d19 {
+    width: 0; 
+    height: 0;
+    border: 40px solid transparent;
+    border-bottom-color: orange;
+    position: relative; 
+    top: -50px;
+}
+.d19:after {
+    content: "";
+    width: 0; 
+    height: 0;
+    position: absolute; 
+    left: -50px; 
+    top: 50px;
+    border: 40px solid transparent;
+    border-top-color: orange;
+} */
+/* }
+li:before {
+    background-image: url(./img/romb.jpg);
+    background-size: 20px 20px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-color: orange;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    content:"";
+} */
+a {
+    color: #fff;
+    text-decoration: none; /*отключить стилди тега а,
+    задать новые стили */
+}
+a:hover {
+    color: orange;
+}
+/* .block{
+    position: relative;
+    width: 400px;
+    height: 400px;
+    border: 2px solid grey;
+}
+.red-cube, .blue-cube, 
+.green-cube, .yellow-cube {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+.red-cube{
+    color:red;
+}
+.blue-cube{
+    color:blue;
+} 
+.green-cube{
+    color:green;
+}
+.yellow-cube{
+    color: yellow;
+}
+@keyframes  */
