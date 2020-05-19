@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boolean</title>
+</head>
+
+<body>
+    <script>
+        var sex = +confirm('Нажмите "ОК" если Вы женщина, "Cancel"  eсли Вы мужчина');
+        if (!sex) {
+            alert("Вы мужчина");
+        } else {
+            alert("Вы женщина");
+        }
+        var drink = +confirm('Любите пить пиво?');
+        if (!drink) {
+            var Hobby = +prompt('Чем тогда занимаетесь(введите цифру)?', ["1-петь", "2-танцевать", "3-рисовать"]);
+            if (Hobby == 1) {
+                alert('Что бы петь надо пить');
+            }
+            else if (Hobby == 2) {
+                alert('Пивка для рывка!');
+            }
+            else if (Hobby == 3) {
+                alert('А стаканюку от печали да что бы руки не дрожали?');
+            }
+            else {
+                alert('НипанЯтнА');
+            }
+        } else {
+            var V = +prompt('Сколько литров спиртного пьете в день?', ['указать от 0 до 5']);
+            if (V < 5) {
+                alert('Слабак!');
+            } else if (V >= 5) {
+                alert('Вы алкаш!');
+            }
+            else {
+                alert('НипанЯтнА');
+            }
+            alert('Пора стать на лыжи!');
+        }
+        alert('Удачи!')
+
+    </script>
+</body>
+
+</html>

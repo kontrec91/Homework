@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var Ask = confirm('Do you want to know temperature in Celsius degrees?');
+        alert(Ask);
+        if (Ask == true) {
+        var NowadayTempC = prompt('Enter the temperature in Celsius degrees');
+        var NowadayTempF = NowadayTempC * 1.8 + 32;
+        alert(`The temperature in fahrenheit degrees ${NowadayTempF}`);
+    } else {
+        var NowadayTempF = prompt('Enter the temperature fahrenheit degrees');
+        var NowadayTempC = (NowadayTempF - 32) / 1.8;
+        alert(`The temperature in Celsius degrees ${NowadayTempC}`);
+    }
+    </script>
+</body>
+</html>
